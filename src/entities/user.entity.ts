@@ -5,12 +5,9 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ unique: true })
   username: string;
 
-  @Column()
-  password: string;
-
-  @Column()
-  email: string;
+  @Column('text') // JSONを文字列として保存
+  value: string;
 }

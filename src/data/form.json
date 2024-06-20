@@ -1,0 +1,65 @@
+{
+    "fields": [
+      {
+        "id": "firstname",
+        "type": "text",
+        "title": "名前",
+        "value": "yasuhisa",
+        "attributes": {
+          "placeholder": "Enter your first name",
+          "required": true,
+          "maxLength": 50
+        }
+      },
+      {
+        "id": "lastname",
+        "type": "text",
+        "title": "苗字",
+        "value": "shirota",
+        "attributes": {
+          "placeholder": "Enter your last name",
+          "required": true,
+          "maxLength": 50
+        }
+      },
+      {
+        "id": "age",
+        "type": "number",
+        "title": "年齢",
+        "value": 21,
+        "attributes": {
+          "placeholder": "Enter your age",
+          "required": true,
+          "min": 0,
+          "max": 120
+        }
+      },
+      {
+        "id": "gender",
+        "type": "select",
+        "title": "性別",
+        "value": "male",
+        "options": [
+          { "label": "男性", "value": "male" },
+          { "label": "女性", "value": "female" },
+          { "label": "Other", "value": "other" }
+        ],
+        "attributes": {
+          "required": true
+        }
+      },
+      {
+        "id": "bio",
+        "type": "textarea",
+        "title": "自己紹介",
+        "value": "短い自己紹介文を書いてください。",
+        "attributes": {
+          "placeholder": "Enter your bio",
+          "required": false,
+          "rows": 4,
+          "maxLength": 500
+        }
+      }
+    ],
+    "message": "データが正常に取得されました。"
+  }

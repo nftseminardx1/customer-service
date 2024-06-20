@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Bearerトークンを変数に割り当てる
+TOKEN="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QwMDAwIiwic3ViIjo5LCJpYXQiOjE3MTg4MDkxMjIsImV4cCI6MTcyNzQ0OTEyMn0.eM4l4zGJgRSR11Uivu4dcJklCHVjIg9aDIfaxazafrNCjuJ3I6ods4mI6GwZdCV1ZAIbKMBDatJEAbgzm6SFsJVNtgxzZKdROwqpnYHXwiTB36ygDGrrm6ZcmVXQ8bR_FeroDWTx_QT7iMa3hbNUywyBZFia8d7U9H1EsFBSYz-W3Nse0a8p20wnHQOUiGP8FS-k6a3mKP-HkFvBJD_dYiVsIY-3S1dvljvg3NISLUMScpuzXbCCFnP2zZ6C8816uYmIsBC5eDtIgjiVvCyQe3vuQuSrR2riKlq1bSIxY2wKT4C0YdU7Kvcuu4_ZxSqkrQjLqGy6PAtbLwLMfdYkaQ"
+
+# 繰り返し利用するための関数
+function call_api {
+  local endpoint=$1
+  curl -H "Authorization: Bearer $TOKEN" -X GET "$endpoint"
+}
+
+# APIエンドポイントに対するGETリクエスト
+call_api "http://localhost:3000/form/profile"
