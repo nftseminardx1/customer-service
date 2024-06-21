@@ -23,6 +23,9 @@ dependencies:
   '@nestjs/typeorm':
     specifier: ^10.0.2
     version: 10.0.2(@nestjs/common@10.3.7)(@nestjs/core@10.3.7)(reflect-metadata@0.2.2)(rxjs@7.8.1)(typeorm@0.3.20)
+  consul:
+    specifier: ^1.2.0
+    version: 1.2.0
   passport:
     specifier: ^0.7.0
     version: 0.7.0
@@ -2293,6 +2296,12 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /consul@1.2.0:
+    resolution: {integrity: sha512-xWMEDRszShfzKI7XQKq12gr3359VUHUFOrAC2ETNpNe8PFO6AUnY0sbscB7JW5WhUEfuveDcI5ScYqM//20bow==}
+    dependencies:
+      papi: 1.1.2
+    dev: false
 
   /content-disposition@0.5.4:
     resolution: {integrity: sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==}
@@ -4719,6 +4728,11 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
     dev: true
+
+  /papi@1.1.2:
+    resolution: {integrity: sha512-cwM6pPpfAYgPe3EQi23SmB5J5s4XFS9lou9z63I5BbnMGmFaR8LAKvKboW7n1IUAKj76OtnyK0YU16JjnZrqVg==}
+    engines: {node: '>=10.0.0'}
+    dev: false
 
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
