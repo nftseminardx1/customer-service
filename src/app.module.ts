@@ -5,7 +5,8 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { FormModule } from './form/form.module';
 import { AuthModule } from './auth/auth.module';
-import { ConsulModule } from './consul/consul.module';
+import { User } from './entities/user.entity';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { ConsulModule } from './consul/consul.module';
     DatabaseModule,
     FormModule,
     AuthModule,
-    ConsulModule,
+    TypeOrmModule.forFeature([User]),
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],

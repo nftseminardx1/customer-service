@@ -48,7 +48,7 @@ export class FormService {
     }
 
     // ヘッダー部分を追加する
-    let updatedData = {
+    const updatedData = {
       title: formJson.title,
       description: formJson.description,
       username: username,
