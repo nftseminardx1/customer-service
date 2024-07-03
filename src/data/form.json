@@ -43,7 +43,7 @@
       "title": "生まれ年（入力不可）",
       "value": 0,
       "attributes": {
-        "readonly": ""
+        "readOnly": ""
       }
     },
     {
