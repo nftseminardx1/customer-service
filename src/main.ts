@@ -1,6 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import axios from 'axios';
+import * as os from 'os';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -15,6 +17,23 @@ async function bootstrap() {
     include: [AppModule],
   });
   SwaggerModule.setup('api', app, document);
+
+  const serviceInfo = {
+    name: 'team',
+    host: `https://${os.hostname()}-3000.csb.app`,
+    port: 3000,
+  };
+  console.log(`https://${os.hostname()}-3000.csb.app`);
+  try {
+    // ディスカバリサービスに登録
+    await axios.post(
+      'https://rvx396-3001.csb.app/discovery/register',
+      serviceInfo,
+    );
+    console.log('Service registered successfully');
+  } catch (error) {
+    console.error('Error registering service:', error);
+  }
 
   // CORS設定を追加
   app.enableCors({
