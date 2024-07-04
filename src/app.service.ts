@@ -24,8 +24,8 @@ export class AppService {
         const profileData = JSON.parse(user.value);
         const ageField = profileData.fields.find((field) => field.id === 'age');
 
-        if (ageField && typeof ageField.value === 'number') {
-          age = ageField.value;
+        if (ageField && !isNaN(Number(ageField.value))) {
+          age = Number(ageField.value);
         } else {
           throw new Error('Age field not found or invalid');
         }
