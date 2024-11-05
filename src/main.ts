@@ -27,7 +27,7 @@ async function bootstrap() {
   try {
     // ディスカバリサービスに登録
     await axios.post(
-      'https://rvx396-3001.csb.app/discovery/register',
+      'https://kjfl6n-3001.csb.app/discovery/register',
       serviceInfo,
     );
     console.log('Service registered successfully');
